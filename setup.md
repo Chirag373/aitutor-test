@@ -39,12 +39,12 @@ python main.py
 *   **Body:**
     ```json
     {
-      "source": "https://en.wikipedia.org/wiki/Computer_science"
+      "source": "https://www.khanacademy.org/math/cc-eighth-grade-math"
     }
     ```
 *   **Example (cURL):**
     ```bash
     curl -X POST http://127.0.0.1:8000/api/generate-question \
     -H "Content-Type: application/json" \
-    -d '{"source": "https://en.wikipedia.org/wiki/Computer_science"}'
+    -d '{"source": "https://www.khanacademy.org/math/cc-eighth-grade-math"}'
     ```
