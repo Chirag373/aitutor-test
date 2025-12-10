@@ -18,20 +18,28 @@ Install the required packages using pip.
 pip install -r requirements.txt
 ```
 
-### 4. Run the Server
+
+### 4. Configure API Key
+Open `api/routes.py` and strictly replace the placeholder string `"add the api key here"` with your valid Google Gemini API key.
+```python
+# api/routes.py
+genai.configure(api_key="YOUR_VALID_API_KEY")
+```
+
+### 5. Run the Server
 Start the FastAPI server using Uvicorn.
 ```bash
 python main.py
 ```
 *   The server will start at `http://127.0.0.1:8000`.
 
-### 5. API Usage
+### 6. API Usage
 **Generate a Question**
 *   **Endpoint:** `POST /api/generate-question`
 *   **Body:**
     ```json
     {
-      "source": "Your topic or URL here"
+      "source": "https://en.wikipedia.org/wiki/Computer_science"
     }
     ```
 *   **Example (cURL):**

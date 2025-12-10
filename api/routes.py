@@ -6,7 +6,8 @@ import json
 
 router = APIRouter()
 
-genai.configure(api_key="AIzaSyAF-N7obAkvmchzIdhvxdiCahZJhElHf_w")
+# TODO: Add the API key here
+genai.configure(api_key="add the api key here")
 
 @router.post("/generate-question", response_model=QuestionResponse)
 async def generate_question(request: QuestionRequest):
